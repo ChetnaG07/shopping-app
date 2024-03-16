@@ -1,0 +1,120 @@
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+.btn-comm{
+    background-color: $primary-color;
+    color: $white;
+    display: inline-block;
+    padding: 5px 25px;
+    text-align: center;
+    border:1px solid transparent;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    @include transition(all .35s ease-in);
+    &:hover{
+        background-color: #fff;
+        border-color:$primary-color;
+        color: $primary-color;
+    }
+    
+}
+
+.btn-black{
+    background: $black;
+    &:hover{
+        border-color: $black;
+        color:$black;
+    }
+}
+
+.section-heading{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.form-control{
+    @include transition(all .35s ease-in);
+    &:focus{
+        box-shadow: unset;
+        border-color: $primary-color;
+        outline: 0;
+    }
+}
+
+.input-grp{
+    position: relative;
+    border:$border-light-grey;
+    padding: 8px 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+    .input-icon{
+        position: absolute;
+        top: 10px;
+        left: 15px;;
+    }
+    input{
+        border: 0;
+        box-shadow: unset;
+        outline: 0;
+        height: auto;
+        padding-left: 35px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 1rem;
+        &:focus{
+            box-shadow: unset;
+        }
+        &::-webkit-input-placeholder{
+            color:$text-light-grey;
+            font-size: 1rem;
+        }
+    }
+}
+
+.box-heading{
+    font-size: 18px;;
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    
+}
+
+.text-right{
+    text-align: right;
+}
+
+
+.owl-nav{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    button{
+        span{
+            font-size: 40px;
+        }
+        &:hover{
+            background: transparent !important;
+            color:$primary-color !important;
+        }
+    }
+    .owl-prev{
+        transform: translateX(-30px);      
+    }
+    .owl-next{
+        transform: translateX(30px);      
+    }
+}

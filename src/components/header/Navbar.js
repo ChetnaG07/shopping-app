@@ -9,7 +9,7 @@ import NavBarItem from "./NavBarItem";
 const Navbar = () => {
   const [isSidebar, setIsSidebar] = useState(false);
   const { data: catagories } = useGetAllCategoriesQuery();
-  //console.log(catagories);
+  console.log(catagories);
   if (!catagories) return;
   const navLi = catagories.map((category, i) => (
     <NavBarItem key={i} item={category} />

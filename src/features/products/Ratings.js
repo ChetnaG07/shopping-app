@@ -7,7 +7,7 @@ const Ratings = ({ value }) => {
   useEffect(() => {
     setStar(Math.round(value));
   }, [value]);
-  console.log(star, value);
+  // console.log(star, value);
   return (
     <>
       {[...Array(star)].map((star, index) => (

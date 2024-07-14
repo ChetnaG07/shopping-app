@@ -10,11 +10,11 @@ const PayButton = ({ cartItems }) => {
         "https://stripe-backend-9ch1.onrender.com/create-checkout-session",
         {
           cartItems,
-          userId: currentUser.uid,
+          /* userId: currentUser.uid, */
         }
       );
       if (res.data.url) {
-        console.log(res.data.url);
+        //console.log(res.data.url);
         window.location.href = res.data.url;
       }
     } catch (error) {

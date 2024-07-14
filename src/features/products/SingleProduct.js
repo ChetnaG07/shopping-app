@@ -35,7 +35,7 @@ const SingleProduct = () => {
     if (isSuccess) setQtyValue(product?.qty);
   }, [isSuccess]);
 
-  console.log("singleProduct findP", product, productId);
+  //console.log("singleProduct findP", product, productId);
 
   /* console.log("single", product.qty, qtyValue); */
 
@@ -89,7 +89,7 @@ const SingleProduct = () => {
   } else if (isError) {
     console.log(error);
   }
-  console.log(product?.images);
+  //console.log(product?.images);
   return (
     <>
       <div className="single-product-sec p-4 mt-5">

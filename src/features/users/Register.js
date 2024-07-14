@@ -40,7 +40,7 @@ const Register = () => {
       });
 
       navigate("/login");
-      console.log(res?.user?.email);
+      //console.log(res?.user?.email);
     } catch (error) {
       console.log(error);
     }
@@ -58,7 +58,7 @@ const Register = () => {
     onSubmit,
   });
 
-  console.log("errors", formik.errors);
+  // console.log("errors", formik.errors);
   return (
     <>
       <div className="login-sec user-auth-sec">

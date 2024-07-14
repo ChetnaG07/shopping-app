@@ -32,15 +32,15 @@ const Login = () => {
     const { email, password } = values;
     try {
       const res = await signInWithEmailAndPassword(auth, email, password);
-      console.log(res);
-      console.log("user", user);
+      //console.log(res);
+      //console.log("user", user);
       localStorage.setItem("accessToken", user?.accessToken);
 
       dispatch(
         loggedIn({
-          uid: user?.uid,
-          name: user?.displayName,
-          email: user?.email,
+          uid: res?.user?.uid,
+          name: res?.user?.displayName,
+          email: res?.user?.email,
         })
       );
       navigate("/");
@@ -59,7 +59,7 @@ const Login = () => {
     onSubmit,
   });
 
-  console.log("errors", formik.errors);
+  //console.log("errors", formik.errors);
   return (
     <>
       <div className="login-sec user-auth-sec">

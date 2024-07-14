@@ -11,12 +11,10 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
 } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 import { loggedIn } from "./authSlice";
 
 const SocialLogin = () => {
-  const [user, loading] = useAuthState(auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -24,13 +22,12 @@ const SocialLogin = () => {
     const googleProvider = new GoogleAuthProvider();
     try {
       const res = await signInWithPopup(auth, googleProvider);
-      console.log("google", res);
-      console.log("googleUser", user);
+      //console.log("google", res);
       dispatch(
         loggedIn({
-          uid: user?.uid,
-          name: user?.displayName,
-          email: user?.email,
+          uid: res?.user?.uid,
+          name: res?.user?.displayName,
+          email: res?.user?.email,
         })
       );
       navigate("/");
@@ -43,13 +40,13 @@ const SocialLogin = () => {
     const fbProvider = new FacebookAuthProvider();
     try {
       const res = await signInWithPopup(auth, fbProvider);
-      console.log("google", res);
-      console.log("fbUser", user);
+      //console.log("google", res);
+
       dispatch(
         loggedIn({
-          uid: user?.uid,
-          name: user?.displayName,
-          email: user?.email,
+          uid: res?.user?.uid,
+          name: res?.user?.displayName,
+          email: res?.user?.email,
         })
       );
       navigate("/");

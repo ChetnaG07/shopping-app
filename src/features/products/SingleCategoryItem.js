@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../cart/cartSlice";
 
 const SingleCategoryItem = ({ product, category }) => {
-  console.log("singleProductItem", product, product.id);
+  //console.log("singleProductItem", product, product.id);
   const dispatch = useDispatch();
   return (
     <>

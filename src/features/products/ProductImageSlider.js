@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const ProductImageSlider = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  console.log("pimgs", images);
+  //console.log("pimgs", images);
 
   return (
     <>

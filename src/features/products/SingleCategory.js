@@ -20,7 +20,7 @@ const SingleCategory = () => {
     content = ids.map((id) => (
       <SingleCategoryItem key={id} product={entities[id]} category={category} />
     ));
-    console.log(data);
+    //console.log(data);
   } else if (isError) {
     console.log(error);
   }

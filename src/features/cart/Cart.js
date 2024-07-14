@@ -8,7 +8,7 @@ import { removeFromCart } from "./cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log("pay ", cart.cart);
+  //console.log("pay ", cart.cart);
   const dispatch = useDispatch();
 
   const cartTotal = cart.cart.reduce(
@@ -16,9 +16,9 @@ const Cart = () => {
     0
   );
 
-  console.log("cartTotal", cartTotal);
+  // console.log("cartTotal", cartTotal);
 
-  console.log("cart", cart, cart.isEmpty);
+  //console.log("cart", cart, cart.isEmpty);
   if (cart.cart.length == 0) {
     return (
       <div className="container text-center emptyCart">
